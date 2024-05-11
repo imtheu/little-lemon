@@ -1,0 +1,19 @@
+:root {
+    --color-primary-green: #495E57;
+    --color-primary-yellow: #F4CE14;
+    --color-secondary-pink: #EE9972;
+    --color-secondary-light-pink: #FBDABB;
+    --color-highlight-light: #EDEFEE;
+    --color-highlight-dark: #333333;
+
+    --text-paragraph: 16px "Karla", sans-serif;
+    --text-paragraph-highlight: 500 16px "Karla", sans-serif;
+    --text-card-title: bold 18px "Karla", sans-serif;
+    --text-lead: 500 18px "Karla", sans-serif;
+    --text-subtitle: 40px "Markazi Text", serif;
+    --text-display: 500 64px "Markazi Text", serif;
+    --text-section-title: 800 20px "Karla", sans-serif;
+    --text-section: 800 16px "Karla", sans-serif;
+
+    --radius: 16px;
+}
