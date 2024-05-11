@@ -6,8 +6,10 @@ import BookingPage from "./components/pages/bookingPage";
 
 const App = () => {
   return (
-    <div className="container">
-      <Header />
+    <>
+      <div className="container">
+        <Header />
+      </div>
       <main>
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
@@ -15,7 +17,7 @@ const App = () => {
         </Routes>
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 

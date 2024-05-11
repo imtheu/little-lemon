@@ -1,7 +1,10 @@
 import React from "react";
+import CallToAction from "../sections/callToAction/callToAction";
 
-const HomePage = () => {
-  return <div>HomePage</div>;
-};
+const HomePage = () => (
+  <>
+    <CallToAction />
+  </>
+);
 
 export default HomePage;

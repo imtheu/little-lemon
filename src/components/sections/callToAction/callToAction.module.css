@@ -1,0 +1,46 @@
+.callToAction {
+  background: var(--color-primary-green);
+  padding: 50px 0;
+}
+
+.callToAction > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.callToAction h1 {
+  font: var(--text-display);
+  color: var(--color-primary-yellow);
+}
+
+.callToAction h2 {
+  font: var(--text-subtitle);
+  color: var(--color-highlight-light);
+}
+
+.callToAction p {
+  font: var(--text-lead);
+  color: var(--color-highlight-light);
+  margin-bottom: 40px;
+}
+
+.callToAction img {
+  border-radius: var(--radius);
+  position: relative;
+  bottom: -120px;
+  width: 50%;
+  max-height: 450px;
+  object-fit: cover;
+}
+
+.content {
+  max-width: 400px;
+}
+
+@media (max-width: 768px) {
+  .callToAction img {
+    display: none;
+  }
+}
