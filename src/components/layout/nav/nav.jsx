@@ -33,7 +33,7 @@ const Nav = () => (
   <nav className={style.nav}>
     <ul className={style.navList}>
       {links.map(({ href, label }) => (
-        <li>
+        <li key={href}>
           <a href={href}>{label}</a>
         </li>
       ))}

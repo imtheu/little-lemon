@@ -1,12 +1,19 @@
+import { Route, Routes } from "react-router-dom";
 import Footer from "./components/layout/footer";
 import Header from "./components/layout/header/header";
-import Main from "./components/layout/main";
+import HomePage from "./components/pages/homePage";
+import BookingPage from "./components/pages/bookingPage";
 
 const App = () => {
   return (
-    <div class="container">
+    <div className="container">
       <Header />
-      <Main />
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/booking" element={<BookingPage />}></Route>
+        </Routes>
+      </main>
       <Footer />
     </div>
   );
