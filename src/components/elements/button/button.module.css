@@ -1,0 +1,16 @@
+.button {
+  background: var(--color-primary-yellow);
+  border: 0;
+  padding: 12px 30px;
+  font: var(--text-section);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button:active {
+  opacity: 0.6;
+}
