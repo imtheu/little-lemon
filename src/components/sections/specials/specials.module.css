@@ -1,0 +1,25 @@
+.specials {
+  padding: 120px 0;
+}
+
+.sectionTitle {
+  font: var(--text-display);
+  color: var(--color-highlight-dark);
+}
+
+.sectionHeading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 34px;
+}
+
+.cards li {
+  flex: 1;
+}

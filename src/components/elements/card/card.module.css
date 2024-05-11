@@ -1,0 +1,66 @@
+.card {
+  background: var(--color-highlight-light);
+  border-top-right-radius: var(--radius);
+  border-top-left-radius: var(--radius);
+  overflow: hidden;
+  height: 100%;
+  min-width: 300px;
+}
+
+.card img {
+  width: 100%;
+  height: 185px;
+  object-fit: cover;
+}
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.card h1 {
+  font: var(--text-card-title);
+  color: var(--color-highlight-dark);
+}
+
+.card span {
+  font: var(--text-paragraph-highlight);
+  color: var(--color-secondary-pink);
+}
+
+.card p {
+  font: var(--text-paragraph);
+  color: var(--text-primary-green);
+  flex-grow: 1;
+  min-height: 100px;
+}
+
+.card button {
+  border: 0;
+  color: var(--color-highlight-dark);
+  font: var(--text-section);
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card button::after {
+  content: "";
+  background: url("../../../../public/cart-icon.svg");
+  width: 16.5px;
+  height: 10.5px;
+  display: block;
+}
+
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
