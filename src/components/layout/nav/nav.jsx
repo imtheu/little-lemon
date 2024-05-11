@@ -2,32 +2,7 @@ import React from "react";
 
 import style from "./nav.module.css";
 
-const links = [
-  {
-    label: "Home",
-    href: "/",
-  },
-  {
-    label: "About",
-    href: "/about",
-  },
-  {
-    label: "Menu",
-    href: "/menu",
-  },
-  {
-    label: "Reservations",
-    href: "/reservations",
-  },
-  {
-    label: "Order Online",
-    href: "/order-online",
-  },
-  {
-    label: "Login",
-    href: "/login",
-  },
-];
+import { links } from "../../data/navigationLinks";
 
 const Nav = () => (
   <nav className={style.nav}>
