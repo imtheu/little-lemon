@@ -1,0 +1,17 @@
+.customersSay {
+  background: var(--color-primary-green);
+  text-align: center;
+  padding: 40px 0 80px;
+}
+
+.title {
+  color: var(--color-primary-yellow);
+  font: var(--text-display);
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}

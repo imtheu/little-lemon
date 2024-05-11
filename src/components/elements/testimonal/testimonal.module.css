@@ -1,0 +1,31 @@
+.testimonal {
+  background: var(--color-highlight-light);
+  flex: 1;
+  padding: 30px 22px;
+  text-align: left;
+  color: var(--color-highlight-dark);
+  border-radius: var(--radius);
+  min-width: 200px;
+}
+
+.testimonal h1,
+.testimonal h2 {
+  font: var(--text-card-title);
+}
+
+.testimonal img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.testimonal div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 18px 0;
+}
+
+.testimonal p {
+  font: var(--text-paragraph);
+}
