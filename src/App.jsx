@@ -1,10 +1,9 @@
-import "./App.css";
-import Footer from "./components/footer";
-import Header from "./components/header";
-import Main from "./components/main";
-import Nav from "./components/nav";
+import Footer from "./components/layout/footer";
+import Header from "./components/layout/header";
+import Main from "./components/layout/main";
+import Nav from "./components/layout/nav";
 
-function App() {
+const App = () => {
   return (
     <>
       <Header />
@@ -13,6 +12,6 @@ function App() {
       <Footer />
     </>
   );
-}
+};
 
 export default App;
