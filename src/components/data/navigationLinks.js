@@ -13,7 +13,7 @@ export const links = [
   },
   {
     label: "Reservations",
-    href: "/reservations",
+    href: "/booking",
   },
   {
     label: "Order Online",
