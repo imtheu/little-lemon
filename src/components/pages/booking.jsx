@@ -1,6 +1,7 @@
 import React, { useReducer } from "react";
 import BookingForm from "../elements/bookingForm/bookingForm";
-import { fetchAPI } from "../../api";
+import { fetchAPI, submitAPI } from "../../api";
+import { useNavigate } from "react-router-dom";
 
 const fetchByDate = (date) => {
   let result;
@@ -28,16 +29,29 @@ export const initializeTimes = async () => {
 };
 
 const BookingPage = () => {
+  const navigate = useNavigate();
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
 
   const onDateChange = (newDate) =>
     dispatch({ type: "CHANGE_DATE", payload: newDate });
+
+  const submitForm = async (formData) => {
+    try {
+      const result = await submitAPI(formData);
+      if (result) {
+        navigate("/confirmed");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div className="container">
       <BookingForm
         availableTimes={availableTimes}
         onDateChange={onDateChange}
+        onSubmitForm={submitForm}
       />
     </div>
   );

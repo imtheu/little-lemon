@@ -4,7 +4,7 @@ import style from "./bookingForm.module.css";
 import Button from "../button/button";
 import { useEffect } from "react";
 
-const BookingForm = ({ availableTimes, onDateChange }) => {
+const BookingForm = ({ availableTimes, onDateChange, onSubmitForm }) => {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState("");
@@ -15,8 +15,18 @@ const BookingForm = ({ availableTimes, onDateChange }) => {
     availableTimes.then((res) => setAvailable(res));
   }, [availableTimes]);
 
+  const onSubmit = (event) => {
+    event.preventDefault();
+    onSubmitForm({
+      date,
+      time,
+      guests,
+      occasion,
+    });
+  };
+
   return (
-    <form className={style.bookingForm}>
+    <form className={style.bookingForm} onSubmit={onSubmit}>
       <h1>Book Now</h1>
       <label htmlFor="res-date">Choose date</label>
       <input
