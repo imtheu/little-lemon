@@ -30,7 +30,7 @@ export const initializeTimes = async () => {
 
 const BookingPage = () => {
   const navigate = useNavigate();
-  const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
+  const [availableTimes, dispatch] = useReducer(updateTimes, null);
 
   const onDateChange = (newDate) =>
     dispatch({ type: "CHANGE_DATE", payload: newDate });
