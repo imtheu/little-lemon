@@ -1,0 +1,22 @@
+.bookingForm {
+  display: grid;
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.bookingForm h1 {
+  font: var(--text-display);
+  color: var(--color-primary-green);
+}
+
+.bookingForm label {
+  font: var(--text-section-title);
+}
+
+.bookingForm input,
+.bookingForm select {
+  border: 1px solid var(--color-highlight-dark);
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  box-shadow: none;
+}
