@@ -2,12 +2,18 @@ import React, { useState } from "react";
 
 import style from "./bookingForm.module.css";
 import Button from "../button/button";
+import { useEffect } from "react";
 
 const BookingForm = ({ availableTimes, onDateChange }) => {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState("");
   const [occasion, setOccasion] = useState("");
+  const [available, setAvailable] = useState([]);
+
+  useEffect(() => {
+    availableTimes.then((res) => setAvailable(res));
+  }, [availableTimes]);
 
   return (
     <form className={style.bookingForm}>
@@ -29,9 +35,11 @@ const BookingForm = ({ availableTimes, onDateChange }) => {
         onChange={({ target }) => setTime(target.value)}
         id="res-time"
       >
-        {availableTimes.map((availableTime) => (
-          <option key={availableTime}>{availableTime}</option>
-        ))}
+        {available.length > 0
+          ? available.map((availableTime) => (
+              <option key={availableTime}>{availableTime}</option>
+            ))
+          : null}
       </select>
 
       <label htmlFor="guests">Number of guests</label>
